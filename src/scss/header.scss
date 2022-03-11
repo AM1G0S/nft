@@ -1,0 +1,170 @@
+//====================================================================================================
+.header {
+  position: relative;
+  padding: rem(40) 0 rem(60) 0;
+  background-color: $minorColor;
+  background-image: url(@img/main-bg.webp);
+  background-position: left, center;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &::before {
+    @include adaptiveValue("height", 320, 120, 1920, 320);
+    @include adaptiveValue("width", 320, 120, 1920, 320);
+    @include adaptiveValue("left", 0, 230);
+    bottom: 0;
+    background-image: url(@img/header/bitcoin.png);
+  }
+
+  &::after {
+    @include adaptiveValue("height", 300, 120);
+    @include adaptiveValue("width", 300, 120);
+    right: 0;
+    top: 0;
+    @include adaptiveValue("top", 0, 60, 507, 320);
+    background-image: url(@img/header/ethereum.png);
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__img {
+    position: absolute;
+    transform: translate(0, -50%);
+    top: 100%;
+    right: 0;
+    transform: translateY(-100%);
+    @include adaptiveValue("width", 650, 0);
+    @include adaptiveValue("height", 600, 0);
+    @include adaptiveValue("right", 0, -50);
+  }
+
+  &__deadlines {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+    @include adaptiveValue("margin-bottom", 60, 30);
+  }
+
+  &__time {
+    @include adaptiveValue("font-size", 15, 13);
+    font-weight: 500;
+    line-height: math.div(37.2, 24);
+    text-transform: uppercase;
+    color: $weakColor;
+  }
+
+  &__data {
+    display: block;
+    color: $whiteColor;
+    font-weight: 700;
+    @include adaptiveValue("font-size", 28, 20);
+  }
+
+  &__text {
+    @include adaptiveValue("max-width", 520, 280);
+    margin-bottom: rem(40);
+    @include adaptiveValue("font-size", 20, 14);
+    font-weight: 400;
+    line-height: math.div(37.2, 20);
+  }
+
+  &__button {
+    display: block;
+  }
+}
+
+//====================================================================================================
+
+//Burger
+/*
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #000;
+		}
+		&::before {
+			top: 0px;
+		}
+		&::after {
+			bottom: 0px;
+		}
+		span {
+			top: calc(50% - 1px);
+		}
+		.menu-open & {
+			span {
+				transform: scale(0);
+			}
+			&::before {
+				transform: rotate(-45deg);
+				top: calc(50% - 1px);
+			}
+			&::after {
+				transform: rotate(45deg);
+				bottom: calc(50% - 1px);
+			}
+		}
+	}
+}
+*/
+
+//Блок с соц сетями
+//
+.socials {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1d1d1d;
+  border-radius: 10px;
+  @include adaptiveValue("padding-top", 16, 11);
+  @include adaptiveValue("padding", 14, 7);
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 7;
+  filter: drop-shadow(0 4 px 34 px rgba(0, 0, 0, 0.7));
+
+  &__item:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  &__img {
+    @include adaptiveValue("width", 40, 32);
+    @include adaptiveValue("height", 40, 32);
+    transition: transform 0.3s ease 0s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+//========================

@@ -1,0 +1,48 @@
+<div class="popup" id="popup" aria-hidden="true">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+
+      <button class="popup__close" data-close type="button">
+        <img class="popup__icon" src="@img/icons/close.svg" alt="закрыть">
+      </button>
+
+      <div class="popup__top">
+        <h3 class="popup__title">
+          Заявка на обучение
+        </h3>
+        <div class="popup__text">
+          <p>Предварительно мы с Вами созвонимся</p>
+        </div>
+      </div>
+
+      <form class="form">
+
+        <label class="form__label">
+          <span class="form__name">Ваше имя</span>
+          <input class="form__field" placeholder="Иван" type="text" name="user-name" required="" maxlength="20">
+        </label>
+
+        <label class="form__label">
+          <span class="form__name">Номер телефона</span>
+          <input class="form__field" id="phone-input" placeholder="+7(___)___-__-__" type="tel" name="user-tel"
+            required="">
+        </label>
+
+        <label class="form__label">
+          <span class="form__name">Ваше сообщение</span>
+          <textarea class="form__field form__field_textarea" placeholder="Тут можете написать ваши вопросы, чтобы мы заранее подготовили на них ответы" maxlength="900"
+            name="message" required=""></textarea>
+        </label>
+
+        <label class="form__label label-form">
+          <input class="label-form__checkbox" type="checkbox" required="">
+          <span class="label-form__subtitle">
+            Я согласен(а) с политикой конфиденциальности
+          </span>
+        </label>
+        <button class="button popup__button" type="submit">Отправить</button>
+      </form>
+
+    </div>
+  </div>
+</div>
