@@ -1,4 +1,8 @@
 // Заголовки, общие БЄМ блоки и проче...
+.section-padding {
+  padding: rem(70) 0 rem(80) 0;
+}
+
 .title {
   font-family: "Rostov", sans-serif;
   color: $yellowColor;
@@ -9,10 +13,11 @@
 }
 
 .subtitle {
+  text-align: center;
   font-family: "Rostov", sans-serif;
-  @include adaptiveValue("font-size", 85, 45);
+  @include adaptiveValue("font-size", 70, 38, 1920, 320);
   @include adaptiveValue("line-height", 90, 50);
-  margin-bottom: 20px;
+  margin-bottom: rem(30);
   text-transform: uppercase;
 }
 
