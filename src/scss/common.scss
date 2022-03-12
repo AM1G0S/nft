@@ -8,6 +8,19 @@
   text-transform: uppercase;
 }
 
+.subtitle {
+  font-family: "Rostov", sans-serif;
+  @include adaptiveValue("font-size", 85, 45);
+  @include adaptiveValue("line-height", 90, 50);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.text {
+  @include adaptiveValue("font-size", 18, 14);
+  @include adaptiveValue("line-height", 24.3, 20);
+}
+
 .button {
   position: relative;
   padding: rem(20) rem(40);
@@ -38,11 +51,3 @@
   }
 }
 
-@keyframes highlights {
-  0% {
-   
-  }
-  100% {
-
-  }
-}
