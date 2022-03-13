@@ -1,8 +1,6 @@
 .phenomenon {
-  background-image: url(@img/next-bg.webp);
-  background-size: cover;
+  background: url(@img/next-bg.webp) 50%/cover no-repeat fixed;
   color: $minorColor;
-  background-size: contain;
 }
 
 .phenomenon__wrapper {
