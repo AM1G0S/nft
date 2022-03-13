@@ -3,57 +3,61 @@
 
 // Блок со спойлерами
 .spollers {
-	display: grid;
-	gap: 15px;
+  display: grid;
+  gap: rem(3);
+  max-width: rem(760);
+  margin: 0 auto;
+  margin-bottom: rem(100);
 }
 // Спойлер
 .spollers__item {
-	font-size: rem(20);
-	&:not(:last-child) {
-		margin-bottom: em(30, 20);
-	}
+  font-size: rem(20);
 }
 // Заголовок спойлера
 .spollers__title {
-	width: 100%;
-	cursor: default;
-	text-align: left;
-	border: 1px solid #eee;
-	padding: rem(10) rem(15);
-	border-radius: rem(5);
-	position: relative;
-	._spoller-init & {
-		cursor: pointer;
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			right: 10px;
-			top: 50%;
-			background-color: #000;
-			height: 2px;
-			width: 15px;
-			transition: transform 0.5s ease 0s;
-		}
-		&::before {
-			transform: translate(-75%, -50%) rotate(40deg);
-		}
-		&::after {
-			transform: translate(0, -50%) rotate(-40deg);
-		}
-		&._spoller-active {
-			&::before {
-				transform: translateX(-75%) rotate(-40deg);
-			}
-			&::after {
-				transform: rotate(40deg);
-			}
-		}
-	}
+  width: 100%;
+  cursor: default;
+  text-align: left;
+  padding: rem(30) rem(20);
+  border-radius: 0;
+  background-color: #1d1d1d;
+  @include adaptiveValue("font-size", 20, 16);
+  color: $whiteColor;
+  position: relative;
+  ._spoller-init & {
+    cursor: pointer;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      background-color: $yellowColor;
+      height: 2px;
+      width: 15px;
+      transition: transform 0.5s ease 0s;
+    }
+    &::before {
+      transform: translate(-75%, -50%) rotate(40deg);
+    }
+    &::after {
+      transform: translate(0, -50%) rotate(-40deg);
+    }
+    &._spoller-active {
+      &::before {
+        transform: translateX(-75%) rotate(-40deg);
+      }
+      &::after {
+        transform: rotate(40deg);
+      }
+    }
+  }
 }
 // Контент спойлера
 .spollers__body {
-	padding: rem(20);
-	border-radius: rem(5);
-	border: 1px solid #eee;
+  padding: rem(20);
+  border-radius: rem(5);
+  background-color: #1d1d1d;
+  border: 0;
+  @include adaptiveValue("font-size", 18, 14);
 }
