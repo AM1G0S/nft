@@ -20,7 +20,7 @@
   @include adaptiveValue("max-width", 570, 400);
   padding: 0 rem(15) rem(15) rem(15);
   @include adaptiveValue("padding-top", 20, 16);
-  border: 1px solid $yellowColor;
+  border: rem(2) solid $yellowColor;
   border-radius: rem(10);
 }
 

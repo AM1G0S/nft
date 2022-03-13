@@ -61,4 +61,8 @@
 #arrow-prev,
 #arrow-next {
   color: $minorColor;
+  transition: transform 0.3s ease;
+  &:hover{
+    transform: scale(1.1);
+  }
 }

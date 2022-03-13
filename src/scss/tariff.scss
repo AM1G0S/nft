@@ -1,0 +1,112 @@
+.tariff {
+  background-color: $minorColor;
+}
+
+.tariff__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: rem(20);
+  row-gap: rem(50);
+}
+
+.tariff__item {
+  position: relative;
+  @include adaptiveValue("max-width", 400, 350);
+  padding: rem(50) rem(20);
+  @include adaptiveValue("padding-bottom", 50, 20);
+  border: rem(2) solid $yellowColor;
+  border-radius: rem(10);
+  height: fit-content;
+}
+
+.tariff__title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: fit-content;
+  transform: translate(-50%, -50%);
+  @include adaptiveValue("font-size", 32, 24);
+  color: $yellowColor;
+  background-color: $minorColor;
+}
+
+.tariff__point {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: rem(60);
+  width: fit-content;
+
+  &:not(:last-child) {
+    margin-bottom: rem(10);
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    @include adaptiveValue("width", 15, 12);
+    @include adaptiveValue("height", 17, 14);
+    transform: translateY(-50%);
+    background-image: url(../img/icons/arrow-right.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.tarif__prace {
+  position: relative;
+  display: block;
+  margin-bottom: rem(30);
+  @include adaptiveValue("font-size", 32, 24);
+  text-align: center;
+  color: $yellowColor;
+}
+
+.tarif__old-prace {
+  position: absolute;
+  top: 0;
+  transform: translateY(-100%);
+  color: #635f5f;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    transform: translateY(-50);
+    width: 100%;
+    height: rem(2);
+    background-color: $yellowColor;
+  }
+}
+
+.tariff__buttons {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 240px;
+  margin-bottom: rem(30);
+}
+
+.tariff__button_installment{
+  background-color: $weakColor;
+  color: $whiteColor
+}
+
+.tariff__button{
+  @include adaptiveValue("padding", 20, 13);
+}
+
+.tariff__button {
+  border-radius: rem(5);
+  animation: none;
+
+  &:not(:last-child) {
+    margin-bottom: rem(25);
+  }
+}
+
+.tariff__places {
+  text-align: center;
+}
