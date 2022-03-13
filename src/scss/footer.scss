@@ -1,3 +1,17 @@
 //====================================================================================================
+.footer {
+  background-color: $minorColor;
+}
+
+.footer__bottom{
+  padding: rem(15) rem(0);
+  background-color: #1d1d1d;
+}
+
+.footer__link{
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+}
 
 //====================================================================================================

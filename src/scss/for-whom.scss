@@ -1,0 +1,35 @@
+.for-whom {
+  background-color: $minorColor;
+  background-image: url(@img/bitcoin-2.webp);
+  background-repeat: no-repeat;
+  background-position: top right;
+  @include adaptiveValue("background-size", 466, 120);
+}
+
+.for-whom__list {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  row-gap: rem(45);
+  column-gap: rem(25);
+}
+
+.for-whom__item {
+  position: relative;
+  width: 100%;
+  @include adaptiveValue("max-width", 570, 400);
+  padding: 0 rem(15) rem(15) rem(15);
+  @include adaptiveValue("padding-top", 20, 16);
+  border: rem(2) solid $yellowColor;
+  border-radius: rem(10);
+}
+
+.for-whom__title {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  padding: 0 rem(5);
+  color: $yellowColor;
+  @include adaptiveValue("font-size", 18, 16);
+  background-color: $minorColor;
+}

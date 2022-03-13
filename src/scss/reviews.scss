@@ -1,0 +1,68 @@
+.reviews {
+  position: relative;
+  background-image: url(@img/next-bg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: $minorColor;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    @include adaptiveValue("width", 240, 0);
+    @include adaptiveValue("height", 240, 0);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    top: 0;
+    @include adaptiveValue("right", 40, -150);
+    background-image: url(@img/ethereum-3.webp);
+  }
+
+  &::before {
+    bottom: 0;
+    @include adaptiveValue("left", 40, -150);
+    background-image: url(@img/dollar-2.webp);
+  }
+}
+
+.reviews__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.reviews__text {
+  @include adaptiveValue("font-size", 24, 16);
+  max-width: rem(558);
+  font-weight: 500;
+  margin-bottom: rem(30);
+}
+
+.reviews__img {
+  max-height: 600px;
+  @include adaptiveValue("width", 300, 200);
+}
+
+.reviews__slider {
+  @include adaptiveValue(" max-width", 400, 280);
+  margin-bottom: rem(20);
+}
+
+.reviews__img {
+  display: block;
+  margin: 0 auto;
+}
+
+#arrow-prev,
+#arrow-next {
+  color: $minorColor;
+  transition: transform 0.3s ease;
+  &:hover{
+    transform: scale(1.1);
+  }
+}
