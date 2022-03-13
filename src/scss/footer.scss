@@ -1,14 +1,29 @@
 //====================================================================================================
 .footer {
+  position: relative;
   background-color: $minorColor;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: rem(150);
+    @include adaptiveValue("left", 150, -150, 1500, 320);
+    @include adaptiveValue("top", 0, -250, 1500, 320);
+    @include adaptiveValue("width", 240, 120);
+    @include adaptiveValue("height", 240, 120);
+    background-image: url(@img/dollar.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
 
-.footer__bottom{
+.footer__bottom {
   padding: rem(15) rem(0);
   background-color: #1d1d1d;
 }
 
-.footer__link{
+.footer__link {
   display: block;
   text-align: center;
   text-transform: uppercase;

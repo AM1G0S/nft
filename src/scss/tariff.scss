@@ -1,17 +1,17 @@
 .tariff {
   position: relative;
   background-color: $minorColor;
-  
+
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     @include adaptiveValue("top", 20, -100);
     @include adaptiveValue("left", 20, -100);
     width: rem(240);
     height: rem(240);
     background-image: url(@img/bitcoin-4.webp);
-  background-repeat: no-repeat;
-  background-size: contain;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 
@@ -87,7 +87,7 @@
 
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     top: 50%;
     transform: translateY(-50);
     width: 100%;
@@ -104,9 +104,9 @@
   margin-bottom: rem(30);
 }
 
-.tariff__button_installment{
+.tariff__button_installment {
   background-color: $weakColor;
-  color: $whiteColor
+  color: $whiteColor;
 }
 
 .tariff__button {
