@@ -31,10 +31,6 @@
     background-image: url(@img/header/ethereum.png);
   }
 
-  &__container {
-    position: relative;
-  }
-
   &__body {
     position: relative;
     z-index: 2;
@@ -42,13 +38,11 @@
 
   &__img {
     position: absolute;
-    transform: translate(0, -50%);
     top: 100%;
-    right: 0;
+    @include adaptiveValue("right", 0, -600);
     transform: translateY(-100%);
-    @include adaptiveValue("width", 650, 0);
-    @include adaptiveValue("height", 600, 0);
-    @include adaptiveValue("right", 0, -50);
+    width: 533px;
+    height: 468px;
   }
 
   &__deadlines {
